@@ -82,12 +82,13 @@ WSGI_APPLICATION = 'storage.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway',
-        'USER': 'root',
-        'PASSWORD': '********',
-        'HOST': 'containers-us-west-128.railway.app',
-        'PORT': '7823',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        #'NAME': 'railway',
+        #'USER': 'root',
+        #'PASSWORD': '********',
+       # 'HOST': 'containers-us-west-128.railway.app',
+       # 'PORT': '7823',
     }
 }
 
