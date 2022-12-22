@@ -4,14 +4,16 @@ from .models import Service, PaymentUser, ExpiredPayment
 from rest_framework import mixins
 from .pagination import SimplePagination
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.throttling import UserRateThrottle
+from rest_framework.permissions import IsAuthenticated,IsAdminUser,AllowAny
 
 class ServiceView(ReadOnlyModelViewSet):
+    permission_classes =[IsAuthenticated]
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
     throttle_scope = 'get'
 
 class PaymentUserView(ModelViewSet):
+    permission_classes = [IsAdminUser]
     queryset = PaymentUser.objects.all()
     serializer_class = PaymentUserSerializer
     pagination_class = SimplePagination

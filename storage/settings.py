@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_filters',
     'pagos.apps.PagosConfig',
     'rest_framework',
+    #'rest_framework_authtoken',
     'rest_framework_simplejwt',
     'users.apps.UsersConfig',
     'authapp.apps.AuthappConfig',
