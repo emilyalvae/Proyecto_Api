@@ -161,4 +161,4 @@ SIMPLE_JWT = {
 }
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-CSRF_TRUSTED_ORIGINIS=['https://proyectoapi-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS=['https://proyectoapi-production.up.railway.app']
