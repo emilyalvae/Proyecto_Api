@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django_filters',
     'pagos.apps.PagosConfig',
     'rest_framework',
-    #'rest_framework_authtoken',
+    'rest_framework.authtoken',
     'rest_framework_simplejwt',
     'users.apps.UsersConfig',
     'authapp.apps.AuthappConfig',
@@ -162,3 +162,5 @@ SIMPLE_JWT = {
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 CSRF_TRUSTED_ORIGINS=['https://proyectoapi-production.up.railway.app']
+
+AUTH_USER_MODEL = "auth.User"
